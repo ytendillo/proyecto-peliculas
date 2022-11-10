@@ -1,0 +1,37 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+DROP DATABASE IF EXISTS `peliculas`;
+--
+-- Base de datos: `peliculas`
+--
+CREATE DATABASE IF NOT EXISTS `peliculas` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `peliculas`;
+
+CREATE TABLE `peliculas` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(50) NOT NULL,
+  `anyo` int(4) NOT NULL,
+  `duracion` int(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `peliculas` (`id`, `titulo`, `anyo`, `duracion`) VALUES
+(1, 'El padrino', 1972, 175) ,
+(2, 'El padrino 2', 1974, 200),
+(3, 'Senderos de gloria', 1957, 86),
+(4,'Primera plana', 1974, 105),
+(5,'Cadena perpetua', 1994, 142);
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
